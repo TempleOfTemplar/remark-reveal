@@ -1,7 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="972a6ffd-f55a-4738-ac43-2ab83f1c1a55" name="Default Changelist" comment="" />
+    <list default="true" id="972a6ffd-f55a-4738-ac43-2ab83f1c1a55" name="Default Changelist" comment="2">
+      <change afterPath="$PROJECT_DIR$/demo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/env.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdown.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/AdvancedSlidesSettings.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Notice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/PaneType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Tfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/comment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/imageCollector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/obsidianMarkdownPreprocessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/obsidianUtils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/options.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/autoClosingProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/blockProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/calloutProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/chartProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/commentProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/debugViewProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/defaultBackgroundProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/dropProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/emojiProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/excalidrawProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/footNoteProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/formatProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/fragmentProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/gridProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/iconsProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/imageProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/internalLinkProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/latexProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/mermaidProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/multipleFileProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/processors/referenceProcessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/revealRenderer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/backgroundImageTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/backgroundTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/borderTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/classMappingTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/classTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/fragmentTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/gridTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/paddingTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/rotateTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/styleMappingTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/transformers/styleTransformer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/yamlParser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obsidian/yamlStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obsidian-advanced-slides/src/markdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/obsidian-advanced-slides/src/markdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obsidian-advanced-slides/src/revealExporter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/obsidian-advanced-slides/src/revealExporter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obsidian-advanced-slides/src/revealRenderer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/obsidian-advanced-slides/src/revealRenderer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/defaults.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/defaults.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/listing.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/template/listing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template/reveal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/template/reveal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,11 +74,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2GAtzofOZ46JrEiVyYSspROpfiM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,18 +99,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/obsidian-advanced-slides" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist/plugins/template" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\obsidian-advanced-slides" />
+      <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\dist\plugins\template" />
+      <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\dist" />
       <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal" />
+      <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\src\obsidian" />
       <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\src\plugins" />
       <recent name="C:\Users\Templar\PhpstormProjects\remark-reveal\src" />
     </key>
   </component>
@@ -55,8 +127,17 @@
       <updated>1665843481059</updated>
       <workItem from="1665843482471" duration="5492000" />
       <workItem from="1665893318720" duration="2522000" />
-      <workItem from="1665896813641" duration="1619000" />
+      <workItem from="1665896813641" duration="18726000" />
+      <workItem from="1665916658804" duration="5171000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1665898865372</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665898865372</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,5 +153,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
 </project>

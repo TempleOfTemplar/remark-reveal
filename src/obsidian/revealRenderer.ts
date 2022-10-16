@@ -1,28 +1,38 @@
-import readFileModule from 'fs-extra';
-import {join, basename, extname} from 'path';
-import {glob} from 'glob';
+import fsExtraModule from 'fs-extra';
+import { join, basename, extname } from 'path';
+import glob from 'glob';
 import Mustache from 'mustache';
-import {md} from './markdown';
+import { markdown } from '../markdown';
 
-import defaults from './defaults.json';
-import {ObsidianMarkdownPreprocessor} from './obsidianMarkdownPreprocessor';
-import {ObsidianUtils} from './obsidianUtils';
-import {YamlParser} from './yamlParser';
-import {ImageCollector} from './imageCollector';
-import {RevealExporter} from './revealExporter';
+import defaults from '../defaults.json';
+import { ObsidianMarkdownPreprocessor } from './obsidianMarkdownPreprocessor';
+import { ObsidianUtils } from './obsidianUtils';
+import { YamlParser } from './yamlParser';
+import { ImageCollector } from './imageCollector';
 import _ from 'lodash';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { AdvancedSlidesSettings } from '../models/AdvancedSlidesSettings';
+const md = markdown();
+const { readFile } = fsExtraModule;
 
-const {readFile} = readFileModule;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export class RevealRenderer {
 	private processor: ObsidianMarkdownPreprocessor;
 	private pluginDirectory: string;
 	private yaml: YamlParser;
 
-	constructor(utils: ObsidianUtils) {
-		this.pluginDirectory = utils.getPluginDirectory();
-		this.processor = new ObsidianMarkdownPreprocessor(utils);
-		this.yaml = new YamlParser(utils.getSettings());
+	constructor(defaultSettings: AdvancedSlidesSettings) {
+		this.pluginDirectory = this.getPluginDirectory();
+		const obsidianUtils = new ObsidianUtils(defaultSettings);
+		this.processor = new ObsidianMarkdownPreprocessor(obsidianUtils);
+		this.yaml = new YamlParser(defaultSettings);
+	}
+
+	getPluginDirectory(): string {
+		return path.join(__dirname, 'plugins');
 	}
 
 	async renderFile(filePath: string, params: any) {
@@ -52,35 +62,30 @@ export class RevealRenderer {
 		const content = (await readFile(filePath.toString())).toString();
 		let rendered = await this.render(content, renderForPrint, renderForEmbed);
 
-		if (renderForExport) {
-			ImageCollector.getInstance().disable();
-			// await this.exporter.export(filePath, rendered, ImageCollector.getInstance().getAll());
-			rendered = await this.render(content, renderForPrint, renderForEmbed);
-		}
-
 		return rendered;
 	}
 
 	async render(input: string, renderForPrint: boolean, renderEmbedded: boolean) {
-		const {yamlOptions, markdown} = this.yaml.parseYamlFrontMatter(input);
+		const { yamlOptions, markdown } = this.yaml.parseYamlFrontMatter(input);
 		const options = this.yaml.getSlideOptions(yamlOptions, renderForPrint);
 		const revealOptions = this.yaml.getRevealOptions(options);
 
-		const {title} = options;
+		const { title } = options;
 		const themeUrl = this.getThemeUrl(options.theme);
 		const highlightThemeUrl = this.getHighlightThemeUrl(options.highlightTheme);
 
 		const slidifyOptions = this.yaml.getSlidifyOptions(options);
-
-		const processedMarkdown = this.processor.process(markdown, options as any);
-		const slides = this.slidify(processedMarkdown, slidifyOptions);
-
+		console.log("markdown before parsing", markdown)
+		const processedMarkdown = this.processor.process(markdown, options);
+		console.log("markdown after parsing", markdown)
+		const slides = this.slidify(markdown, slidifyOptions);
+		console.log("markdown after slidify", slides)
 		const cssPaths = this.getCssPaths(options.css);
 
 		const settings = this.yaml.getTemplateSettings(options);
 
-		const {enableCustomControls} = options;
-		const {enableChalkboard, enableOverview, enableMenu, enableTimeBar, enablePointer} = settings;
+		const { enableCustomControls } = options;
+		const { enableChalkboard, enableOverview, enableMenu, enableTimeBar, enablePointer } = settings;
 
 		let base = '';
 		if (!ImageCollector.getInstance().shouldCollect()) {

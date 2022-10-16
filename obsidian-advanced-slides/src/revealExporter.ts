@@ -1,6 +1,8 @@
-import { emptyDir, copy, writeFile } from 'fs-extra';
+import fsExtraModule from 'fs-extra';
 import path from 'path';
-import { ObsidianUtils } from './obsidianUtils';
+import {ObsidianUtils} from './obsidianUtils';
+
+const {emptyDir, copy, writeFile} = fsExtraModule;
 
 export class RevealExporter {
 	private pluginDirectory: string;
